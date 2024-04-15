@@ -16,6 +16,7 @@ resource "aws_autoscaling_policy" "avg_cpu_policy_greater_than_xx" {
  
 }
 
+/*
 # TTS - Scaling Policy-2: Based on ALB Target Requests
 # THIS POLICY IS SPECIFIC TO ALB and NOT APPLICABLE TO NLB
 
@@ -28,8 +29,9 @@ resource "aws_autoscaling_policy" "alb_target_requests_greater_than_yy" {
   target_tracking_configuration {
     predefined_metric_specification {
       predefined_metric_type = "ALBRequestCountPerTarget"
-      resource_label =  "${module.alb.lb_arn_suffix}/${module.alb.target_group_arn_suffixes[0]}"    
+      resource_label =  "${module.alb.arn_suffix}/${module.alb.target_group_arn_suffixes[0]}"    
     }  
     target_value = 10.0
   }    
 }
+*/
