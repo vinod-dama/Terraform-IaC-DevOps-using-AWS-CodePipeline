@@ -4,8 +4,8 @@ version: 0.2
 env:
   variables:
     TERRAFORM_VERSION: "1.15.9"
-    TF_COMMAND: "apply"
-    #TF_COMMAND: "destroy"
+    #TF_COMMAND: "apply"
+    TF_COMMAND: "destroy"
 
 phases:
   install:
@@ -30,8 +30,9 @@ phases:
       - terraform --version
       - terraform init -input=false --backend-config=stage.conf
       - terraform validate
-      - terraform plan -lock=false -input=false -var-file=stage.tfvars -out=tfplan  
-      - terraform $TF_COMMAND -input=false -var-file=stage.tfvars tfplan 
+      - terraform plan -lock=false -input=false -var-file=stage.tfvars #-out=tfplan  
+      #- terraform $TF_COMMAND -input=false -var-file=stage.tfvars tfplan 
+      - terraform $TF_COMMAND -input=false -var-file=stage.tfvars 
   post_build:
     on-failure: CONTINUE   
     commands:
