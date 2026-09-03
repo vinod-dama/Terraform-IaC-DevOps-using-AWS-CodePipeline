@@ -33,8 +33,8 @@ phases:
       - terraform --version
       - terraform init -input=false --backend-config=stage.conf
       - terraform validate
-      - terraform plan -lock=false -input=false -var-file=stage.tfvars           
-      - terraform $TF_COMMAND -input=false -var-file=stage.tfvars -auto-approve  
+      - terraform plan -lock=false -input=false -var-file=stage.tfvars -out=tfplan     
+      - terraform $TF_COMMAND -input=false -var-file=stage.tfvars -auto-approve tfplan
   post_build:
     on-failure: CONTINUE   
     commands:
