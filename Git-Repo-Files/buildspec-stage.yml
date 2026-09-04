@@ -4,8 +4,8 @@ version: 0.2
 env:
   variables:
     TERRAFORM_VERSION: "1.15.9"
-    #TF_COMMAND: "apply"
-    TF_COMMAND: "destroy"
+    TF_COMMAND: "apply"
+    #TF_COMMAND: "destroy"
 
 phases:
   install:
@@ -20,7 +20,7 @@ phases:
   pre_build:
     on-failure: ABORT     
     commands:
-      - echo terraform execution started on `date`            
+      - echo "terraform execution started on `date`"          
   build:
     on-failure: ABORT   
     commands:
@@ -30,13 +30,13 @@ phases:
       - terraform --version
       - terraform init -input=false --backend-config=stage.conf
       - terraform validate
-      - terraform plan -lock=false -input=false -var-file=stage.tfvars #-out=tfplan  
-      #- terraform $TF_COMMAND -input=false -var-file=stage.tfvars tfplan 
-      - terraform $TF_COMMAND -input=false -var-file=stage.tfvars -auto-approve
+      - terraform plan -lock=false -input=false -var-file=stage.tfvars -out=tfplan  
+      - terraform $TF_COMMAND -input=false -var-file=stage.tfvars tfplan 
+      #- terraform $TF_COMMAND -input=false -var-file=stage.tfvars -auto-approve
   post_build:
     on-failure: CONTINUE   
     commands:
-      - echo terraform execution completed on `date`      
+      - echo "terraform execution completed on `date`"
 
 
     
