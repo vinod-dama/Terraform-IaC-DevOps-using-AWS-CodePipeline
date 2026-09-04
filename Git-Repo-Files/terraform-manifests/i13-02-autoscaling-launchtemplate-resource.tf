@@ -4,7 +4,7 @@ resource "aws_launch_template" "my_launch_template" {
   instance_type = var.instance_type
   key_name      = var.key_name
   ebs_optimized = true
-  user_data     = filebase64("${path.module}/app1-install.sh")
+  user_data     = filebase64("${path.module}/app2-install.sh")
   block_device_mappings {
     device_name = "/dev/sdf"
 
