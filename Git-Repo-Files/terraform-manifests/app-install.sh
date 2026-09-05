@@ -160,11 +160,11 @@ sudo tee /var/www/html/index.html > /dev/null <<'EOF'
         </div>
 
         <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/watch?v=_MyN5i-g7tI&list=PL2xPLYVmzJy51ozAuvCtu98687ad8G0hi" allowfullscreen></iframe>
+            + <iframe src="https://www.youtube.com/embed/_MyN5i-g7tI?list=PL2xPLYVmzJy51ozAuvCtu98687ad8G0hi" allowfullscreen></iframe>
         </div>
 
         <div class="cta-buttons">
-            <a href="https://www.youtube.com/watch?v=_MyN5i-g7tI&list=PL2xPLYVmzJy51ozAuvCtu98687ad8G0hi" target="_blank" class="btn btn-primary">✈️ Subscribe to Vino's Voyage</a>
+            <a href="https://www.youtube.com/embed/_MyN5i-g7tI?list=PL2xPLYVmzJy51ozAuvCtu98687ad8G0hi" target="_blank" class="btn btn-primary">✈️ Subscribe to Vino's Voyage</a>
             <a href="/app1/metadata.html" class="btn btn-secondary">🔍 View EC2 Metadata (IMDSv2)</a>
         </div>
     </div>
