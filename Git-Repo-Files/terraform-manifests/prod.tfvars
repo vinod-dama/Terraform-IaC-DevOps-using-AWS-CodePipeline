@@ -1,5 +1,5 @@
 #department
-department = "stage-DEVOPS"
+department = "prod-DEVOPS"
 
 #VPC Variables
 azs                                = ["ap-south-1a", "ap-south-1b"]
