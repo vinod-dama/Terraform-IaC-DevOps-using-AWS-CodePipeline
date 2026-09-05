@@ -164,7 +164,7 @@ sudo tee /var/www/html/index.html > /dev/null <<'EOF'
         </div>
 
         <div class="cta-buttons">
-            <a href="https://www.youtube.com/@VinoSVoyage" target="_blank" class="btn btn-primary">✈️ Subscribe to Vino's Voyage</a>
+            <a href="https://www.youtube.com/@VinoSVoyage/featured" target="_blank" class="btn btn-primary">✈️ Subscribe to Vino's Voyage</a>
             <a href="/app1/metadata.html" class="btn btn-secondary">🔍 View EC2 Metadata (IMDSv2)</a>
         </div>
     </div>
