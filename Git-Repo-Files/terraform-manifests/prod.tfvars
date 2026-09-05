@@ -19,5 +19,5 @@ instance_type = "t3.micro"
 key_name      = "south-keypai-21052026"
 
 #dns Variables
-dns_name = "stage.vinodnayan.academy"
+dns_name = "prod.vinodnayan.academy"
 
