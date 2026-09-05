@@ -160,7 +160,7 @@ sudo tee /var/www/html/index.html > /dev/null <<'EOF'
         </div>
 
         <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/ZcFG3jcwMio" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/@VinoSVoyage/featured" allowfullscreen></iframe>
         </div>
 
         <div class="cta-buttons">
