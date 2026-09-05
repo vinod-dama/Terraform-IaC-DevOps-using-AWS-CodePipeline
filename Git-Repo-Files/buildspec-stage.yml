@@ -31,7 +31,7 @@ phases:
       - cd "$CODEBUILD_SRC_DIR/Git-Repo-Files/terraform-manifests"
       - ls -lrt "$CODEBUILD_SRC_DIR/Git-Repo-Files/terraform-manifests"
       - terraform --version
-      - terraform init -input=false --backend-config=prod.conf
+      - terraform init -input=false --backend-config=stage.conf
       - terraform validate
       - terraform plan -lock=false -input=false -var-file=stage.tfvars
       - terraform $TF_COMMAND -lock=false -input=false -var-file=stage.tfvars -auto-approve
